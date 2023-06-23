@@ -5,19 +5,24 @@ from PyQt5.QtCore import *
 from PyQt5 import *
 
 
+# class 클래스_이름(상속할_클래스_이름)
 class MyApp(QMainWindow):
 
+    # 생성자
     def __init__(self):
         super().__init__()
         self.date = QDate.currentDate()
         self.initUI()
-
-    # 메인 UI
-    def initUI(self):
-        # 여기서 self는 MyApp 객체를 말합니다.
         self.statusBar().showMessage(self.date.toString(Qt.DefaultLocaleLongDate))  # currentDate() 메서드를 통해 현재 날짜를 얻고 showMessage() 메서드로 상태표시줄에 현재 날짜를 표시했습니다.
         self.setWindowTitle('My First Application')  # setWindowTitle() 메서드는 타이틀바에 나타나는 창의 제목을 설정합니다.
         self.move(300, 300)  # move() 메서드는 위젯을 스크린의 x=300px, y=300px의 위치로 이동시킵니다.
+        self.resize(500, 500)   # resize() 메서드는 위젯의 크기를 너비 500px, 높이 500px로 조절합니다.
+        self.center()           # center() 메서드를 통해서 창이 화면의 가운데에 위치하게 됩니다.
+        self.show()             # show() 메서드는 위젯을 스크린에 보여줍니다.
+
+    # 메인 UI
+    # 여기서 self는 MyApp 객체를 말합니다.
+    def initUI(self):
 
         # 종료 Button
         btnButton = QPushButton("종료", self)
@@ -49,9 +54,7 @@ class MyApp(QMainWindow):
         label2.move(10, 10)
         label3.move(10, 10)
 
-        self.resize(500, 500)   # resize() 메서드는 위젯의 크기를 너비 500px, 높이 500px로 조절합니다.
-        self.center()           # center() 메서드를 통해서 창이 화면의 가운데에 위치하게 됩니다.
-        self.show()             # show() 메서드는 위젯을 스크린에 보여줍니다.
+
 
 # ----------------------------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------
