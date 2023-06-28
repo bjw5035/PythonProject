@@ -19,6 +19,7 @@ class MyApp(QMainWindow):
         self.resize(500, 500)   # resize() 메서드는 위젯의 크기를 너비 500px, 높이 500px로 조절합니다.
         self.center()           # center() 메서드를 통해서 창이 화면의 가운데에 위치하게 됩니다.
         self.show()             # show() 메서드는 위젯을 스크린에 보여줍니다.
+        # self.setCentralWidget(tabs)
 
     # 메인 UI
     # 여기서 self는 MyApp 객체를 말합니다.
@@ -53,6 +54,8 @@ class MyApp(QMainWindow):
         label1.move(10, 10)
         label2.move(10, 10)
         label3.move(10, 10)
+
+
 
 
 
