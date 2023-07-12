@@ -12,14 +12,12 @@ browser.maximize_window() # 화면 최대화
 # 아이디 입력창
 # id = browser.find_element_by_css_selector("#id")
 # id.click()
-# pyperclip.copy('send2ugfd')
 # pyautogui.hotkey('ctrl', 'v')
 # time.sleep(2)
 
 # 비밀번호 입력창
 # pw = browser.find_element_by_css_selector("#pw")
 # pw.click()
-# pyperclip.copy("quswodn93!@")
 # pyautogui.hotkey('ctrl', 'v')
 # time.sleep(5)
 
