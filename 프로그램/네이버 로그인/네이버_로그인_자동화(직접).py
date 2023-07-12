@@ -2,23 +2,13 @@ from selenium import webdriver
 import pyautogui
 import pyperclip
 import time
+from selenium.webdriver.chrome.service import Service
 
+# 셀레니움 버전차이로 인한 소스 변경
 url = 'https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com'
-browser = webdriver.Chrome('C:/chromedriver.exe')
-browser.get(url)
+service = Service(executable_path='C:\chromedriver.exe')
+
+driver = webdriver.Chrome(service=service)
 
 
-id = browser.find_element_by_css_selector('#id')
-id.click()
-pyperclip.copy('send2ugfd')
-pyautogui.hotkey('Ctrl', 'v')
 time.sleep(3)
-
-pw = browser.find_element_by_css_selector('#pw')
-pw.click()
-pyperclip.copy('quswodn93!@')
-pyautogui.hotkey('Ctrl', 'v')
-time.sleep(3)
-
-btn = browser.find_element_by_css_selector('#log\.login')
-btn.click()
