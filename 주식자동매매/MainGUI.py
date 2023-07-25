@@ -3,6 +3,8 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import *
+from tkinter import *
+
 
 
 # class 클래스_이름(상속할_클래스_이름)
