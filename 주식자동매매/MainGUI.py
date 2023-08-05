@@ -1,3 +1,5 @@
+import logging
+
 import sys
 
 from PyQt5.QtWidgets import *
@@ -43,19 +45,19 @@ class MyApp(QMainWindow):
         tabs = QTabWidget(self)
         tab1 = QWidget()
         tab2 = QWidget()
-        tab3 = QWidget()
+        # tab3 = QWidget()
 
         tabs.addTab(tab1, "tab1")
         tabs.addTab(tab2, "tab3")
-        tabs.addTab(tab3, "tab3")
+        # tabs.addTab(tab3, "tab3")
 
         label1 = QLabel("tab1 widget", tab1)
         label2 = QLabel("tab2 widget", tab2)
-        label3 = QLabel("tab3 widget", tab3)
+        # label3 = QLabel("tab3 widget", tab3)
 
         label1.move(10, 10)
         label2.move(10, 10)
-        label3.move(10, 10)
+        # label3.move(10, 10)
 
 
 
