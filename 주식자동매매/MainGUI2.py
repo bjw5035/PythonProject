@@ -8,22 +8,28 @@ from tkinter import *
 win = tk.Tk()
 win.geometry("500x500")
 win.title("Main GUI")
+win.resizable(False,False)
 
 
 # Label 사용
 label = tk.Label(win, text="테스트", width=10, height=5, fg="black")
 label.pack()
 
+# Entry(기입창)
+def calc(event):
+    label.config(text="")
+
 
 # 버튼 close
 def close():
     print("종료되었습니다.")
     win.destroy()
-    # win.quit()
-    # exit()
 
-button = tk.Button(height="5", width="10", text="종료", command=close())
-button.pack()
+button = tk.Button(height="5", width="10", text="종료", command=close) # command에 close()넣어주게 되면 GUI창 크기 및 기능이 작동하지 않음
+button.pack(side="bottom")
+
+
+
 
 
 
